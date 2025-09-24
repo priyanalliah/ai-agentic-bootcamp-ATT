@@ -49,7 +49,7 @@
     <!-- - [AI Agent Configuration](#ai-agent-configuration)   -->
     - [The Network Status Agent](#the-network-status-agent)
     - [The Communication Agent](#the-communication-agent)
-  - [Lab 2: Agent Development Kit](#lab-2:-agent-development-kit)    
+  - [Part 2: Agent Development Kit](#lab-2:-agent-development-kit)    
     - [The Incident Diagnosis Agent](#the-incident-diagnosis-agent) 
     - [The Server Status Agent](#the-server-status-agent)
     - [The Supervisor Agent](#the-supervisor-agent)  
@@ -118,8 +118,8 @@ Watsonx Orchestrate is IBM’s platform for creating, managing, and running AI-d
    - You should recive an email with a link to join an IBM Cloud account
    - Accept the invite and sign in to your IBM Cloud Account
 3. **Access your Orchestrate Instance**
-   - In the IBM Cloud Dashboard navigate to the Resource List. Under AI/ML select Watson Orchestrate-itz and launch the application.
-  ![alt text](images/siu_2.png)
+   - In the IBM Cloud Dashboard navigate to the Resource List. Under AI/ML select watsonx Orchestrate-Temp-Workshop and launch the application.
+  ![alt text](<Screenshot 2025-09-23 at 3.02.51 PM.png>)
   ![alt text](images/siu_3.png)
    - If you don't see any resources under AI/ML in your IBM Cloud Account kindly reachout to an instructor for assistance. 
    - Once you have access to an Orchestrate instance you may continue to the next section
@@ -130,7 +130,7 @@ Watsonx Orchestrate is IBM’s platform for creating, managing, and running AI-d
 - Run the following command below to clone the repository. This will give you the foundational resources to complete the bootcamp.
 
 ```bash
-  git clone https://github.com/Aditya-Asthana/ai-agentic-bootcamp-dish.git
+  git clone https://github.com/priyanalliah/ai-agentic-bootcamp-dish.git
 ```  
 
 - Now open the project folder in vscode, and navigate to the terminal within the project directory.
@@ -228,7 +228,7 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
    - We will first import an external REST API as a tool. To do this we will import an OpenAPI Spec into WXO
      1. Navigate to the Agent Builder tab.
    ![alt text](images/wxo_homepage.png)
-     2. Import the Open API Spec **All Tools → Create tool → Import an external tool → Upload the OpenAPI (wxo_assets/tools/get_data_openapi.json) → Select the "Get Data" operation → Done**
+     2. Create tool → Add from file or MCP server"→ Upload the OpenAPI (wxo_assets/tools/get_data_openapi.json) → Select the "Get Data" operation → Done**
       ![alt text](images/wxo_tool1.png)
       ![alt text](images/wxo_tool2.png)
       ![alt text](images/wxo_tool3.png)
@@ -236,11 +236,7 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
      3. Verify you see an entry for `get_data` tool under the tools homepage.
      4. If you're using a shared environment change the name of your tool not to overwrite other users work. 
       ![alt text](images/network_status_tool_info.png)
-   -  Explore the Tool Info Screen. 
-      1.  Add tool descriptions
-      2.  Add descriptions for output schema
-      3.  [Writing Tool Descriptions](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-descriptions-for-tools): Allows agents to identify when to use specific tools.
-  #
+   
   #
   #
 
@@ -263,7 +259,7 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
         ![alt text](images/wxo_agent1.png)
         ![alt text](images/wxo_agent2.png)
      3. Navigate to the Agent Builder tab.
-     3. Give your agent a name. `Network Status Agent` 
+     3. Give your agent a name. `network_status_agent_(with initials)` 
         - If you're in a shared WXO instance remember to make your name is unique.  
      4. Add a description for your agent. 
          - [Writing Descriptions](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-descriptions-for-agents): It is necessary to provide well-crafted descriptions for your agents. These descriptions are used by supervisor agents to determine how to route user requests. It helps the agent decide when to consume this agent as a collaborator when it is added to the agent’s collaborator list. 
@@ -328,7 +324,7 @@ This tool provides the functionality for the agent to send emails via the Outloo
    - We will first import the Outlook REST API as a tool. To do this we will import an OpenAPI Spec into WXO
      1. Navigate to the Agent Builder tab.
         ![alt text](images/wxo_homepage.png)
-     2. Import the Open API Spec **All Tools → Create tool → Import an external tool → Upload the OpenAPI (wxo_assets/tools/outlook_email_openapi.json) → Select the "Send Email Outlook" operation → Done**
+     2. Create tool → Add from file or MCP server"→ Upload the OpenAPI (wxo_assets/tools/get_data_openapi.json) → Select the "Send Email Outlook" operation → Done**
       ![alt text](images/wxo_tool1.png)
       ![alt text](images/wxo_tool2.png)
       ![alt text](images/wxo_tool3.png)
@@ -358,7 +354,7 @@ This agent definition links the Communications Agent with the `outlook_email` to
         ![alt text](images/wxo_agent1.png)
         ![alt text](images/wxo_agent2.png)
 
-     3. Give your agent a name. `Communications Agent` 
+     3. Give your agent a name. `communications_agent_(with initials)` 
         - If you're in a shared WXO instance remember to make your name is unique.  
      4. Add a description for your agent. 
          - [Writing Descriptions](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-descriptions-for-agents): It is necessary to provide well-crafted descriptions for your agents. These descriptions are used by supervisor agents to determine how to route user requests. It helps the agent decide when to consume this agent as a collaborator when it is added to the agent’s collaborator list. 
@@ -401,7 +397,7 @@ This agent definition links the Communications Agent with the `outlook_email` to
 
 
 #### 3) Quick sanity checks
-- Ask the agent: “Draft an email invite about an Agentic AI bootcamp in New York around October.”  
+- Ask the agent: `Draft an email invite about an Agentic AI bootcamp in New York around October.`  
 - The agent should generate a professional email body.  
 - If the Outlook tool is configured, you can also instruct it to send the email directly.
 
@@ -415,7 +411,7 @@ This agent definition links the Communications Agent with the `outlook_email` to
  The **Communications Agent** is now ready. It can draft incident updates and, when configured with Outlook, send them directly to stakeholders.
 
 ---
-## Lab 2: Agent Development Kit
+## Part 2: Agent Development Kit
 The Agent Development Kit (ADK) gives you a set of developer-focused tools to build, test, and manage agents in watsonx Orchestrate. With the ADK, you take full control of agent design using a lightweight framework and a simple CLI.
 Define agents in clear YAML or JSON files, create custom Python tools, and manage the entire agent lifecycle with just a few commands. 
 
@@ -439,6 +435,7 @@ This tool provides log analysis capabilities so the agent can extract error patt
   2. This python function mimics log analysis using keyword matching. 
   3. Notice how the `@tool` decorator. This defines the function as a tool for the watsonx orchestrate extention. Notice how the toll desciption is already defined here.
   4. If you're using a shared environment Add your initials to the tool name
+    ![alt text](<Screenshot 2025-09-23 at 3.26.17 PM-1.png>)
   5. Save the file
   6. https://developer.watson-orchestrate.ibm.com/tools/create_tool#creating-python-based-tools
 
@@ -460,6 +457,7 @@ This agent definition links the `diagnose_incident_log` tool with the `incident_
   2. All agents on the backend get defined as yaml. We can create a new agent in the same fashion.
   3. Notice how all the fields match the UI fields. Also Notice we're using a different LLM. 
   4. If you're using a shared environment Add your initials to the agent name
+  ![alt text](<Screenshot 2025-09-23 at 3.26.17 PM-2.png>)
   5. https://developer.watson-orchestrate.ibm.com/agents/build_agent
 
 - Import the Agent using the ADK
@@ -582,14 +580,19 @@ This registers the **Supervisor Agent** and declares its collaborators (the four
 
 > **Console option (SaaS):** Go to **Agents → Add agent**, upload `wxo_assets/agents/supervisor_agent.yaml`, then save.
 
-#### 2) Confirm collaborators (routing targets)
-Open the agent details and confirm the collaborators include:
-- `network_status_agent`
-- `server_status_agent`
-- `incident_diagnosis_agent`
-- `communications_agent`
-
-These must match the exact agent names you imported earlier. If names differ, update the Supervisor YAML or rename the agents for consistency.
+#### 2) 2. Add Collaborator Agents to the NOC_Supervisor_Agent
+a. Go to Manage Agents - > Click on NOC_Supervisor_Agent
+b. Click on Tools -> Add Agent as shown in screenshot
+![alt text](image.png)
+c. Choose "Add from Local Instance" option
+![alt text](image-1.png)
+d. Click on 4 Agents you created as shown below:
+network_status_agent
+server_status_agent
+incident_diagnosis_agent
+communications_agent
+e. Click on Add Agent
+![alt text](image-2.png)
 
 #### 3) Quick sanity checks (routing behavior)
 Try these natural-language prompts to validate routing:
@@ -627,23 +630,6 @@ The **Supervisor Agent** is now ready. It provides a single conversational entry
 
 
 ---
-
-
-### Bonus Use Case: HR Agent Lab  
-
-As an optional exercise, you can explore the **HR Agent Lab**. This lab demonstrates how to build an agent that supports HR workflows, such as answering policy questions and coordinating employee-related tasks.  
-
-A key feature of this lab is the use of the **Flow Builder** in watsonx Orchestrate. Flow Builder allows you to design and run multi-step workflows that sequence agents, tools, and even human approvals. This makes it possible to go beyond simple Q&A and create repeatable, automated HR processes. For example: pulling employee data, checking visa status, and providing managers with structured updates, all in one orchestrated flow.  
-
-All the materials you need for this bonus lab are provided in the bootcamp repo:  
-- The **HR Agent Lab - watsonx Orchestrate Irving PDF**  
-- The **IBM_2025_Benefits_Guide PDF**  
-
-You can find both files in the following folder:  
-`wxo_assets/bonus_labs/hr_agent_lab/`  
-
-This lab is entirely optional but recommended if you’d like to deepen your hands-on experience with agentic solutions, especially to see how **flows** can combine multiple agents and tools into end-to-end HR automation.
-
 
 ## Summary
 

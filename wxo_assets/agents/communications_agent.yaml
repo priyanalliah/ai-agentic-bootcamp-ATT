@@ -26,5 +26,5 @@ instructions: |
 
 collaborators: []
 tools:
-  - send_email_in_outlook
+    - send_email_in_outlook
 knowledge_base: []
