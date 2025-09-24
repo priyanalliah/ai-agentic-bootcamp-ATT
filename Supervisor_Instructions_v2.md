@@ -195,8 +195,7 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
       ![alt text](images/wxo_tool4.png)
      3. Verify you see an entry for `get_data` tool under the tools homepage.
      4. If you're using a shared environment change the name of your tool not to overwrite other users work. 
-      ![alt text](image-3.png)
-      ![alt text](image-4.png)
+     ![alt text](image-7.png)
    
 
 
