@@ -454,7 +454,7 @@ Knowledge Bases refer to Vector Stores that allow your Agents to query unstructu
 > **Console option (SaaS):** Go to **Knowledge Bases → Add knowledge base**, then upload `wxo_assets/knowledge_bases/incident_resolution_guides.yaml`. -->
 
 #### 4) Quick sanity checks
-- Test your agent with the following prompt: `"UPS unit failed at site S002. Generator did not auto-start. Site running on battery only." What is the error type and resolution plan?`
+- Test your agent with the following prompt: `Here is the log: "UPS unit failed at site S002. Generator did not auto-start. Site running on battery only."`
 - The agent should respond with both the **error type** and the **resolution plan**.  
 
 
