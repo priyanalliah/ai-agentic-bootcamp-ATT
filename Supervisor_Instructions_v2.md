@@ -195,14 +195,9 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
       ![alt text](images/wxo_tool4.png)
      3. Verify you see an entry for `get_data` tool under the tools homepage.
      4. If you're using a shared environment change the name of your tool not to overwrite other users work. 
-      ![alt text](images/network_status_tool_info.png)
+      ![alt text](image-3.png)
+      ![alt text](image-4.png)
    
-  #
-  #
-
-
-
-
 
 
 
@@ -241,7 +236,7 @@ In this lab, it **does not use a knowledge base**. Instead, it calls a `get_data
       - Answer questions about the operational status of dish’s network based on the provided site and node data.This includes information about nodes, incidents, and overall health of regions or specific locations. 
       - Provide your answer as a concise summary. If a location, site ID, or region is mentioned, filter your response accordingly.
       ```
-     2. [Writing Behaviours](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-instructions-for-agents): Next, we scroll down to the **Behavior** section. It is crucial to provide instructions to let agents perform effectively. It decides the behavior of the agent and provides context for how to use its tools and agents.
+     2. [Writing Behaviors](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-instructions-for-agents): Next, we scroll down to the **Behavior** section. It is crucial to provide instructions to let agents perform effectively. It decides the behavior of the agent and provides context for how to use its tools and agents.
 
 
       ![alt text](images/wxo_agent7.png)
@@ -346,7 +341,7 @@ This agent definition links the Communications Agent with the `outlook_email` to
       - Respond only with the information requested.
       ```
 
-     2. [Writing Behaviours](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-instructions-for-agents): Next, we scroll down to the **Behavior** section. It is crucial to provide instructions to let agents perform effectively. It decides the behavior of the agent and provides context for how to use its tools and agents.
+     2. [Writing Behaviors](https://developer.watson-orchestrate.ibm.com/getting_started/guidelines#writing-instructions-for-agents): Next, we scroll down to the **Behavior** section. It is crucial to provide instructions to let agents perform effectively. It decides the behavior of the agent and provides context for how to use its tools and agents.
 
 
 
@@ -461,7 +456,7 @@ Knowledge Bases refer to Vector Stores that allow your Agents to query unstructu
 > **Console option (SaaS):** Go to **Knowledge Bases → Add knowledge base**, then upload `wxo_assets/knowledge_bases/incident_resolution_guides.yaml`. -->
 
 #### 4) Quick sanity checks
-- Test your agent with the following prompt: `"UPS unit failed at site S002. Generator did not auto-start. Site running on battery only." what is the error type and resolution plan?`
+- Test your agent with the following prompt: `"UPS unit failed at site S002. Generator did not auto-start. Site running on battery only." What is the error type and resolution plan?`
 - The agent should respond with both the **error type** and the **resolution plan**.  
 
 
