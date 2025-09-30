@@ -117,7 +117,7 @@ Here, we are creating a virtual environment for our dependencies to live. This a
 
 #### Orchestrate Instance Details
 - Navigate to the IBM Cloud resource list. And launch Orchestrate.
-      ![alt text](images/siu_2.png)
+      ![alt text](image-8.png)
   ![alt text](images/siu_3.png)
 - Navigate to the Orchestrate Settings > API details. And Save the URL as we will use it in a later step.
     ![alt text](images/siu_4.png)
