@@ -1,6 +1,6 @@
 # Supervisor Assistant  
 
-![alt text](images/cover_image.jpg)
+![alt text](![alt text](image-9.png))
 
 This use case is about an AI-powered assistant supporting a Network Supervisor in managing service disruptions. The Supervisor is responsible for monitoring the health of regional networks, diagnosing incidents, coordinating across infrastructure and communications, and ensuring timely remediation to minimize downtime. We apply an agentic solution based on watsonx Orchestrate and watsonx.ai to optimize these processes.  
 
