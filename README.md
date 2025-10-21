@@ -59,11 +59,11 @@ Step-by-step instructions for running this use case are available in [this docum
 
 The **Supervisor** receives an alert of a service disruption at a regional site. They engage the **Supervisor Agent** via the Orchestrate conversational interface.  
 
-1. **Check server status** → "Check the server status of `dish.com`."  
+1. **Check server status** → "Check the server status of `ATT.com`."  
 2. **Assess incidents** → "Are there any incidents in our network?"  
 3. **Retrieve site data** → "Get me the network status for site `S002`."  
 4. **Diagnose root cause** → "What is the root cause of this error and what are the steps to resolve it?" (with source references).  
-5. **Communicate resolution** → "Draft an email for the Los Angeles Dish Network team with everything we discussed and let them know the issue is resolved."  
+5. **Communicate resolution** → "Draft an email for the Los Angeles AT&T Network team with everything we discussed and let them know the issue is resolved."  
 
 This demonstrates how multiple agents coordinate seamlessly under the **Supervisor Agent's orchestration**, closing the loop from detection to communication.  
 
